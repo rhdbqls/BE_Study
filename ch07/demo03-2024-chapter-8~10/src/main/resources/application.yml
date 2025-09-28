@@ -20,6 +20,7 @@ spring:
     serialization:
       fail-on-empty-beans: false
   jpa:
+    open-in-view: false
     hibernate:
       ddl-auto: update
     properties:
@@ -28,6 +29,8 @@ spring:
         format_sql: true
         highlight_sql: true
         use_sql_comments: true
+springdoc:
+  default-produces-media-type: application/json
 logging:
   level:
     com.ll.demo03: DEBUG
@@ -38,3 +41,5 @@ logging:
 custom:
   site:
     name: "My Site"
+  accessToken:
+    expirationSec: 600
